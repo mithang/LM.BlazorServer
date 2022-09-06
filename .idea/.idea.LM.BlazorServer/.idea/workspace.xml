@@ -6,13 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e29a2b0-7687-4e8c-af91-fcdee4f5d5e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Note" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LM.BlazorServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LM.BlazorServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/App.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LM.BlazorServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LM.BlazorServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/_Imports.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/NavMenu.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662490176287</updated>
-      <workItem from="1662490201977" duration="1181000" />
+      <workItem from="1662490201977" duration="2033000" />
     </task>
     <servers />
   </component>
