@@ -10,6 +10,17 @@
         </LayoutView>
     </NotFound>
 </Router>
-<MudThemeProvider/>
+<MudThemeProvider Theme="@Theme"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
+@code
+{
+    MudTheme Theme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            AppbarBackground = new MudBlazor.Utilities.MudColor(10, 100, 150, 0.59),
+            Primary = new MudBlazor.Utilities.MudColor(10, 100, 150, 0.9)
+        }
+    };
+}
