@@ -1,10 +1,12 @@
 @page "/newarticle"
+@inject ISnackbar Snackbar
+@using LM.BlazorServer.Services
 <MudItem xs="12" sm="12" md="8" Style="text-align: center;padding: 20px">
     <MudPaper Style="text-align: center;padding: 20px">
     <MudTextField Style="margin-bottom: 20px" Label="Title" Variant="@Variant.Filled" HelperText="Title" Placeholder="Insert your title" T="string"></MudTextField>
     <MudTextField Style="margin-bottom: 20px" Label="Subtitle" Variant="@Variant.Filled" HelperText="Subtitle" Placeholder="Insert your subtitle" T="string"></MudTextField>
         <MudTextField Style="margin-bottom: 20px" Label="Article body" Variant="@Variant.Filled" HelperText="Article body" Placeholder="Insert your article body" T="string"></MudTextField>
-        <MudButton Size="@Size.Medium" Variant="@Variant.Filled" Color="@Color.Primary">Submit</MudButton>
+        <MudButton Size="@Size.Medium" Variant="@Variant.Filled" Color="@Color.Primary" OnClick="@(()=>Submit())">Submit</MudButton>
         <p style="color:#ff0000">@error</p>
     </MudPaper>
 </MudItem>
@@ -23,12 +25,44 @@
     <MudCard Style="margin-top: 20px">
         <MudCardContent>
             <MudText>Authors</MudText>
-            <p><MudTextField T="string"></MudTextField>
-            <MudIconButton Icon="@Icons.Filled.Add"></MudIconButton>
-            </p>
+            <MudTextField @bind-Value="@authorinput" T="string"></MudTextField>
+            <MudIconButton OnClick="@(()=> _newArticle.AddAuthors(authorinput))" Icon="@Icons.Filled.Add"></MudIconButton>
+            @foreach (var item in _newArticle.Authors)
+            {
+                <MudChip Color="Color.Default" OnClose="@(()=>_newArticle.RemoveAuthors(item))">@item</MudChip>
+            }
         </MudCardContent>
     </MudCard>
 </MudItem>
 @code {
+    string authorinput;
     string error;
+    ArticleManager.NewArticle _newArticle = new ArticleManager.NewArticle();
+
+    async Task Submit()
+    {
+        error = null;
+        try
+        {
+            throw new Exception("n");
+            Snackbar.Add("Article submitted", Severity.Success);
+            //error = "Successfully submitted!";
+        }
+        catch (Exception e)
+        {
+            error = "Error!";
+            Snackbar.Add("Article is failed", Severity.Error, config =>
+            {
+                //CLick tren snackbar thi error = null
+                config.Onclick = (bar) =>
+                {
+                    error = null;
+                    StateHasChanged();
+                    return Task.CompletedTask;
+
+                };
+            });
+            
+        }
+    }
 }
