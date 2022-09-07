@@ -3,11 +3,11 @@
 @using LM.BlazorServer.Services
 <MudItem xs="12" sm="12" md="8" Style="text-align: center;padding: 20px">
     <MudPaper Style="text-align: center;padding: 20px">
-    <MudTextField Style="margin-bottom: 20px" Label="Title" Variant="@Variant.Filled" HelperText="Title" Placeholder="Insert your title" T="string"></MudTextField>
-    <MudTextField Style="margin-bottom: 20px" Label="Subtitle" Variant="@Variant.Filled" HelperText="Subtitle" Placeholder="Insert your subtitle" T="string"></MudTextField>
-        <MudTextField Style="margin-bottom: 20px" Label="Article body" Variant="@Variant.Filled" HelperText="Article body" Placeholder="Insert your article body" T="string"></MudTextField>
-        <MudButton Size="@Size.Medium" Variant="@Variant.Filled" Color="@Color.Primary" OnClick="@(()=>Submit())">Submit</MudButton>
-        <p style="color:#ff0000">@error</p>
+    <MudTextField @bind-Value="@_newArticle.Title" Style="margin-bottom: 20px" Label="Title" Variant="@Variant.Filled" HelperText="Title" Placeholder="Insert your title" T="string"></MudTextField>
+    <MudTextField @bind-Value="@_newArticle.SubTitle" Style="margin-bottom: 20px" Label="Subtitle" Variant="@Variant.Filled" HelperText="Subtitle" Placeholder="Insert your subtitle" T="string"></MudTextField>
+    <MudTextField @bind-Value="@_newArticle.Content" Style="margin-bottom: 20px" Label="Article body" Variant="@Variant.Filled" HelperText="Article body" Placeholder="Insert your article body" T="string"></MudTextField>
+    <MudButton Size="@Size.Medium" Variant="@Variant.Filled" Color="@Color.Primary" OnClick="@(()=>Submit())">Submit</MudButton>
+    <p style="color:#ff0000">@error</p>
     </MudPaper>
 </MudItem>
 <MudItem xs="12" sm="12" md="4" Style="padding: 20px">

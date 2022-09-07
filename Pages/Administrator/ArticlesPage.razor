@@ -1,4 +1,5 @@
 @page "/articles"
+@using LM.BlazorServer.Services
 
 <MudItem xs="12" sm="12" md="3">
     <MudPaper Style="margin: 15px;height: 200px;text-align: center;padding: 25px">
@@ -6,24 +7,38 @@
     </MudPaper>
 </MudItem>
 <MudItem xs="12" sm="12" md="9">
-    <MudTable Style="margin: 15px" Dense="true" Hover="true" Bordered="true" Items="new List<string>()">
+    <MudTable Style="margin: 15px" Dense="true" Hover="true" Bordered="true" Items="@Articles">
         <ToolBarContent>
             <MudText Typo="Typo.h5">Articles</MudText>
             <MudSpacer/>
-            <MudTextField T="string" Placeholder="Title" Adornment="Adornment.Start" AdornmentIcon="@Icons.Filled.Search"></MudTextField>
+            <MudTextField @bind-Value="@keysearch" OnAdornmentClick="@Search" T="string" Placeholder="Title" Adornment="Adornment.Start" AdornmentIcon="@Icons.Filled.Search"></MudTextField>
         </ToolBarContent>
         <HeaderContent>
             <MudTh>Title</MudTh>
             <MudTh>Date published</MudTh>
         </HeaderContent>
         <RowTemplate>
-            <MudTd></MudTd>
-            <MudTd></MudTd>
-            <MudTd></MudTd>
+            <MudTd>@context.Title</MudTd>
+            <MudTd>@context.DatePublish</MudTd>
+            <MudTd><MudLink Href="@("/articlepage/"+context.Id)">Read</MudLink></MudTd>
         </RowTemplate>
         <PagerContent></PagerContent>
     </MudTable>
 </MudItem>
 @code {
-    
+    string keysearch;
+    static ArticleManager.NewArticle _newArticle = new ArticleManager.NewArticle();
+    List<ArticleManager.NewArticle> Articles = _newArticle.GetNewArticles();
+    async Task Search()
+    {
+        try
+        {
+            Articles= _newArticle.GetNewArticles(keysearch);
+        }
+        catch (Exception e)
+        {
+            
+        }
+    }
+
 }

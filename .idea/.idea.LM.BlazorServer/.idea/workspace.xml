@@ -6,13 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e29a2b0-7687-4e8c-af91-fcdee4f5d5e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Pages/Administrator/ArticlesPage.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LM.BlazorServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LM.BlazorServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Administrator/ArticlesPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Administrator/ArticlesPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Administrator/NewArticlePage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Administrator/NewArticlePage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ArticleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ArticleManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662490176287</updated>
       <workItem from="1662490201977" duration="2374000" />
-      <workItem from="1662541623877" duration="6429000" />
+      <workItem from="1662541623877" duration="10491000" />
     </task>
     <servers />
   </component>
