@@ -1,0 +1,27 @@
+@page "/article/{ArticleId}"
+@using LM.BlazorServer.Services
+
+<MudItem xs="12" sm="12" md="8">
+    <MudPaper >
+        <MudText>Article Info</MudText>
+    </MudPaper>
+     <MudPaper Style="margin:20px; padding:30px">
+        <MudText Typo="Typo.body1">Body</MudText>
+    </MudPaper>
+</MudItem>
+<MudItem xs="12" sm="12" md="4">
+    <MudPaper>
+        <MudText>Author</MudText>
+        <MudList>
+            <MudListItem>Author 1</MudListItem>
+            <MudListItem>Author 2</MudListItem>
+        </MudList>
+    </MudPaper>
+</MudItem>
+@code {
+
+    [Parameter]
+    public string ArticleId{get;set;}
+    
+
+}

@@ -5,12 +5,7 @@
     <projectFile profileName="IIS Express">LM.BlazorServer.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e29a2b0-7687-4e8c-af91-fcdee4f5d5e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LM.BlazorServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LM.BlazorServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Administrator/ArticlesPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Administrator/ArticlesPage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Administrator/NewArticlePage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Administrator/NewArticlePage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ArticleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ArticleManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2e29a2b0-7687-4e8c-af91-fcdee4f5d5e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +71,7 @@
       <updated>1662490176287</updated>
       <workItem from="1662490201977" duration="2374000" />
       <workItem from="1662541623877" duration="10491000" />
+      <workItem from="1662721474118" duration="8000" />
     </task>
     <servers />
   </component>
